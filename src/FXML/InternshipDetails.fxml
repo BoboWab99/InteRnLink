@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="549.0" prefWidth="850.0" style="-fx-background-color: #f9f9fa;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLERS.InternshipDetailsController">
+    <children>
+        <Pane prefHeight="70.0" prefWidth="850.0" style="-fx-background-color: #7E137E;">
+            <children>
+            <VBox alignment="CENTER_LEFT" layoutX="40.0" prefHeight="70.0">
+               <children>
+                  <Label text="InteRnLink" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+                <HBox alignment="CENTER" layoutX="270.0" layoutY="23.0" spacing="10.0" />
+                <HBox layoutX="622.0" layoutY="26.0" spacing="10.0" />
+                <HBox alignment="CENTER_RIGHT" layoutX="564.0" prefHeight="70.0" spacing="10.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#backHome" style="-fx-background-color: #fff;" text="Home" textFill="#631b63">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#backToInternships" style="-fx-background-color: #fff;" text="Internships">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="91.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #fff;" text="Support" textFill="#631b63">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+            </children></Pane>
+      <ScrollPane hbarPolicy="NEVER" layoutY="69.0" prefHeight="482.0" prefWidth="850.0">
+         <content>
+            <AnchorPane prefHeight="800.0" prefWidth="850.0" style="-fx-background-color: #fff;">
+               <children>
+                    <Label layoutX="337.0" layoutY="39.0" text="Available Internships" textFill="#626278" translateX="-20.0">
+                        <font>
+                            <Font name="System Bold" size="27.0" />
+                        </font>
+                    </Label>
+                  <VBox layoutX="85.0" layoutY="110.0" spacing="10.0">
+                     <children>
+                        <VBox spacing="30.0">
+                           <children>
+                              <HBox spacing="15.0">
+                                 <children>
+                                    <HBox style="-fx-border-color: #ccc;">
+                                       <children>
+                                          <ImageView fx:id="imageView" fitHeight="180.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </HBox>
+                                    <VBox spacing="10.0">
+                                       <children>
+                                          <VBox spacing="3.0">
+                                             <children>
+                                                <Label fx:id="companyNameLabel" text="Company name" textFill="#734b2ecc">
+                                                   <font>
+                                                      <Font name="Verdana Bold" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="internshipTitleLabel" text="Internship title" textFill="#000000e5">
+                                                   <font>
+                                                      <Font name="Verdana Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <Text fx:id="companyDescriptionTxt" strokeType="OUTSIDE" strokeWidth="0.0" text="text" wrappingWidth="340.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <VBox spacing="25.0">
+                                 <children>
+                                    <VBox spacing="7.0">
+                                       <children>
+                                          <Label text="Internship Details:">
+                                             <font>
+                                                <Font name="Verdana Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Text fx:id="internshipDetailsTxt" strokeType="OUTSIDE" strokeWidth="0.0" text="text" wrappingWidth="570.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                    <VBox spacing="7.0">
+                                       <children>
+                                          <Label text="Requirements:">
+                                             <font>
+                                                <Font name="Verdana Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Text fx:id="requirementsTxt" strokeType="OUTSIDE" strokeWidth="0.0" text="text" wrappingWidth="570.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                    <VBox spacing="15.0">
+                                       <children>
+                                          <Text fx:id="submissionInfoTxt" strokeType="OUTSIDE" strokeWidth="0.0" text="text" wrappingWidth="570.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Button mnemonicParsing="false" onAction="#showApplicationForm" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #98006B;" text="Apply Now &gt;&gt;" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="520.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLERS.HomeController">
+   <children>
+      <Pane prefHeight="70.0" prefWidth="850.0" style="-fx-background-color: rgba(122, 26, 263, 0.08); -fx-border-color: #ccc;">
+         <children>
+            <VBox alignment="CENTER_LEFT" layoutX="35.0" prefHeight="70.0">
+               <children>
+                  <TextFlow>
+                     <children>
+                        <Label text="InteRn" textFill="#242020">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label text="Link" textFill="#631b63">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </TextFlow>
+               </children>
+            </VBox>
+            <HBox id="nav_bar" alignment="CENTER" layoutX="270.0" prefHeight="70.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: #007C8F; -fx-border-width: 0px 0px 2px 0px;" text="HOME" textFill="#015a9e">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="nav_internships_btn" mnemonicParsing="false" onAction="#goToInternships" style="-fx-background-color: transparent;" text="INTERNSHIPS" textFill="#5e1a5e">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goToSupportPage" style="-fx-background-color: transparent;" text="SUPPORT" textFill="#5e1a5e">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="622.0" layoutY="26.0" spacing="10.0" />
+            <HBox alignment="CENTER_RIGHT" layoutX="671.0" prefHeight="70.0" spacing="10.0">
+               <children>
+                  <Button fx:id="sign_up_btn" mnemonicParsing="false" onAction="#goToSignUp" style="-fx-background-color: #7E137E; -fx-border-color: #7E137E;" text="Sign Up" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="login_btn" mnemonicParsing="false" onAction="#goToLogin" style="-fx-border-color: #A278A2; -fx-background-color: #f9f9fa;" text="Sign In" textFill="#631b63">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children></Pane>
+      <Pane layoutY="70.0" prefHeight="452.0" prefWidth="850.0" style="-fx-background-color: linear-gradient(to right, #2E009D, #851EA4);">
+         <children>
+            <Label layoutX="260.0" layoutY="91.0" text="Welcome to InteRnLink" textFill="#c1c1de">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="183.0" layoutY="150.0" text="WE PROVIDE ACCESS TO TOP NOTCH INTERNSHIP OPPORTUNITIES." textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Pane layoutX="42.0" layoutY="238.0" prefHeight="200.0" prefWidth="775.0" style="-fx-background-color: rgba(255, 255, 255, 0.35);">
+               <children>
+                  <Line endX="100.0" layoutX="328.0" layoutY="100.0" rotate="90.0" stroke="#242022" style="-fx-fill: #242022;" />
+                  <Label layoutX="49.0" layoutY="41.0" prefHeight="70.0" prefWidth="300.0" text="Are you looking for internship opportunities? This is the right place. Click on the link below to findavailable internships." wrapText="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="av_internships_btn" layoutX="49.0" layoutY="121.0" mnemonicParsing="false" onAction="#goToInternships" prefHeight="30.0" prefWidth="181.0" style="-fx-background-color: #B5054D;" text="Available Internships" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="422.0" layoutY="41.0" prefHeight="70.0" prefWidth="300.0" text="Are you looking for internship opportunities? This is the right place. Click on the link below to findavailable internships." wrapText="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="create_acc_btn" layoutX="422.0" layoutY="121.0" mnemonicParsing="false" onAction="#goToSignUp" prefHeight="30.0" prefWidth="214.0" style="-fx-background-color: #1402B7;" text="Set up your account now" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children></Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

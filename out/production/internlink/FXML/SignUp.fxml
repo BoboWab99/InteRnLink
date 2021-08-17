@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="520.0" prefWidth="850.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLERS.signUpController">
+   <children>
+      <AnchorPane prefHeight="70.0" prefWidth="850.0" style="-fx-background-color: #7E137E;">
+         <children>
+            <TextFlow />
+            <VBox alignment="CENTER_LEFT" layoutX="35.0" prefHeight="70.0">
+               <children>
+                  <Label text="InteRnLink" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_RIGHT" layoutX="750.0" prefHeight="70.0">
+               <children>
+                  <Button fx:id="sign_up_back" mnemonicParsing="false" onAction="#backHome" prefHeight="25.0" prefWidth="56.0" style="-fx-background-color: pink;" text="Back">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <ScrollPane hbarPolicy="NEVER" layoutY="70.0" prefHeight="450.0" prefWidth="850.0">
+         <content>
+            <AnchorPane prefHeight="600.0" prefWidth="856.0" style="-fx-background-color: #fff;">
+               <children>
+                  <Label layoutX="382.0" layoutY="41.0" text="JOIN US">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="281.0" layoutY="93.0" text="Company Name:" />
+                  <TextField fx:id="name_tf" layoutX="282.0" layoutY="110.0" prefHeight="25.0" prefWidth="294.0" style="-fx-background-color: #f9f9fa; -fx-border-color: #ddd;" />
+                  <Label layoutX="281.0" layoutY="151.0" text="Company's Official Email Address:" />
+                  <TextField fx:id="email_tf" layoutX="281.0" layoutY="168.0" prefHeight="25.0" prefWidth="294.0" style="-fx-background-color: #f9f9fa; -fx-border-color: #ddd;" />
+                  <Label layoutX="281.0" layoutY="205.0" text="Primary Phone number:" />
+                  <TextField fx:id="phone_number_tf" layoutX="281.0" layoutY="222.0" prefHeight="25.0" prefWidth="294.0" style="-fx-background-color: #f9f9fa; -fx-border-color: #ddd;" />
+                  <Label layoutX="281.0" layoutY="263.0" text="Official Website Link:" />
+                  <TextField fx:id="website_tf" layoutX="281.0" layoutY="280.0" prefHeight="25.0" prefWidth="294.0" style="-fx-background-color: #f9f9fa; -fx-border-color: #ddd;" />
+                  <Label layoutX="281.0" layoutY="319.0" text="Password:" />
+                  <PasswordField fx:id="password_tf" layoutX="281.0" layoutY="336.0" prefHeight="25.0" prefWidth="294.0" style="-fx-background-color: #f9f9fa; -fx-border-color: #ddd;" />
+                  <Button fx:id="sign_up_btn" layoutX="281.0" layoutY="450.0" mnemonicParsing="false" onAction="#signUp" prefHeight="25.0" prefWidth="294.0" style="-fx-background-color: #7E137E;" text="Sign Up" textFill="WHITE" />
+                  <Label layoutX="282.0" layoutY="375.0" text="Upload company image:" />
+                  <Button layoutX="281.0" layoutY="392.0" mnemonicParsing="false" onAction="#getImageUpload" prefHeight="25.0" prefWidth="294.0" text="Choose Image" />
+                  <Label fx:id="imageChosenLabel" layoutX="282.0" layoutY="422.0" text="No file chosen yet..." />
+                  <Label fx:id="msg" layoutX="281.0" layoutY="487.0" style="-fx-background-color: rgb(182, 45, 45); -fx-padding: 16px 32px 16px 32px;" text="Label" textFill="WHITE" visible="false" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

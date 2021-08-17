@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TitledPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLERS.ApplicantDetailsBoxController">
+   <content>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="fullNameLabel2" text="Full Name">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="60.0" layoutY="20.0" prefHeight="30.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label text="Email:" />
+                  <Label fx:id="emailLabel" layoutX="10.0" layoutY="17.0" text="student@gmail.com" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="60.0" layoutY="50.0" prefHeight="30.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label text="Contact:" />
+                  <Label fx:id="phoneNumberLabel" layoutX="10.0" layoutY="17.0" text="0712345678" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="60.0" layoutY="80.0" prefHeight="30.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label text="Institution:" />
+                  <Label fx:id="schoolLabel2" layoutX="10.0" layoutY="17.0" text="\@StrathU" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="60.0" layoutY="110.0" prefHeight="30.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label text="Degree:" />
+                  <Label fx:id="degreeLabel" layoutX="10.0" layoutY="17.0" text="ICS" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="60.0" layoutY="140.0" prefHeight="30.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label text="CV File:" />
+                  <Label fx:id="cvFileNameLabel" layoutX="10.0" layoutY="17.0" text="my cv.docx" textFill="#1000f7" underline="true">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor></Label>
+                  <Button mnemonicParsing="false" onAction="#openApplicantCV" style="-fx-background-color: #0000b3;" text="Open" textFill="WHITE" />
+                  <Button layoutX="118.0" layoutY="13.0" mnemonicParsing="false" onAction="#downloadApplicantCV" text="Download" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="60.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </content>
+   <graphic>
+      <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="522.0" spacing="14.0">
+         <children>
+            <Label fx:id="fullNameLabel1" text="Full Name" />
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <children>
+                  <Label text="school:" textFill="#727272" />
+                  <Label fx:id="schoolLabel1" text="School" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <children>
+                  <Label text="applying for:" textFill="#727272" />
+                  <Label fx:id="internshipTitleLabel" text="Internship title" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </HBox>
+   </graphic>
+</TitledPane>
